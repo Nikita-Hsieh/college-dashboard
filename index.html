@@ -9,14 +9,16 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 		/>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
 		<div class="dashboard">
 			<!-- Sidebar -->
 			<div class="sidebar">
-				<div class="logo"><i class="fas fa-graduation-cap">Edu College</i></div>
+				<div class="logo">
+					<i class="fas fa-graduation-cap"> Edu College</i>
+				</div>
 				<nav>
 					<ul class="nav-menu">
 						<li class="nav-item">
@@ -153,7 +155,37 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="dashboard-grid">
+					<!-- main chart -->
+					<div class="chart-container">
+						<div class="chart-header">
+							<h3 class="chart-title">Student Performance Overview</h3>
+							<div class="chart-actions">
+								<button class="chart-action-btn">Weekly</button>
+								<button class="chart-action-btn">Monthly</button>
+								<button class="chart-action-btn">Yearly</button>
+							</div>
+						</div>
+
+						<div class="chart-wrapper">
+							<canvas id="performanceChart"></canvas>
+						</div>
+					</div>
+
+					<!-- side panel -->
+					<div class="chart-container">
+						<div class="chart-header">
+							<h3 class="chart-title">Department Distribution</h3>
+						</div>
+						<div class="chart-wrapper">
+							<canvas id="departmentChart"></canvas>
+						</div>
+					</div>
+				</div>
 			</main>
 		</div>
+
+		<script src="./main.js"></script>
 	</body>
 </html>

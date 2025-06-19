@@ -350,3 +350,58 @@ body {
 .trend-negative {
 	color: var(--accent);
 }
+
+/* chart */
+.dashboard-grid {
+	display: grid;
+	grid-template-columns: 7fr 5fr;
+	gap: var(--grid-gap-md);
+}
+
+.chart-container {
+	background: var(--card-bg);
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius-xl);
+	padding: var(--space-xl);
+	backdrop-filter: var(--blur-lg);
+	box-shadow: var(--shadow-md);
+}
+
+.chart-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: var(--space-xl);
+}
+
+.chart-title {
+	font-size: var(--font-lg);
+	font-weight: var(--font-weight-semibold);
+}
+
+.chart-actions {
+	display: flex;
+	gap: var(--space-sm);
+}
+
+.chart-action-btn {
+	padding: var(--space-xs) var(--space-md);
+	border-radius: var(--radius-sm);
+	background: var(--glass-bg);
+	border: 1px solid var(--border-color);
+	color: var(--text-secondary);
+	font-size: var(--font-sm);
+	cursor: pointer;
+	transition: all var(--transition-fast);
+}
+
+.chart-action-btn:hover {
+	background: var(--primary);
+	color: var(--text-primary);
+	border-color: var(--primary);
+}
+
+.chart-wrapper {
+	height: 300px;
+	position: relative;
+}
